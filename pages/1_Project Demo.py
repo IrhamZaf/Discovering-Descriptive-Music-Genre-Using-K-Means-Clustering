@@ -67,21 +67,12 @@ descriptive_labels = ['Happy & Upbeat',
 st.write("You seem to like songs that are:")
 for label in prediction:
     st.write(descriptive_labels[label])
-    # st.write(label)
-
-    # filter so the filtered_df only contains the songs with the same label as the prediction
 
     filtered_df = filtered_df[filtered_df['KMeansLabel'] == label]
 
+    new_filtered_df = filtered_df.copy()
+    new_filtered_df.index = range(1, len(new_filtered_df) + 1)
+
     st.write("You may like these songs:")
-    # st.write(filtered_df)
+    st.write(new_filtered_df[['track_name', 'artists', 'genre', 'KMeansLabel']])
 
-    # show it in table form, however only display the track name, artists, and genre, and also its kmeans label
-
-    # st.write("\nSong List:")
-    # for index, row in filtered_df.iterrows():
-    #     st.write(f"{row['track_name']} - {row['artists']} - {row['genre'] }")
-
-    # show it in a table
-        
-    st.write(filtered_df[['track_name', 'artists', 'genre', 'KMeansLabel']])
