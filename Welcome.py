@@ -6,7 +6,7 @@ import random
 import joblib
 
 st.set_page_config(
-        page_title="Discovering Descriptive Genre Using K-Means Clustering",
+        page_title="Discovering Descriptive Music Genre Using K-Means Clustering",
         page_icon="🎵",
     )
 
@@ -16,9 +16,9 @@ df = pd.read_csv('MusicNormalized.csv')
 # Load the KMeans model from the pickle file
 kmeans = joblib.load('trained_model.joblib')
 
-st.write("# Discovering Descriptive Genre Using K-Means Clustering")
+st.write("# Discovering Descriptive Music Genre Using K-Means Clustering")
 
-st.write("Welcome to the Discovering Descriptive Genre Using K-Means Clustering web app! This is a final year project made by Muhamad Irham Zafran in partial requirement for the degree of Bachelor of Information Systems (Hons.) Intelligent Systems Engineering.")
+st.write("Welcome to the Discovering Descriptive Music Genre Using K-Means Clustering web app! This is a final year project made by Muhamad Irham Zafran in partial requirement for the degree of Bachelor of Information Systems (Hons.) Intelligent Systems Engineering.")
 
 st.sidebar.success("Please navigate through the sidebar.")
 
